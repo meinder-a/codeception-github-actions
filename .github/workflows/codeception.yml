@@ -1,0 +1,16 @@
+name: CodeCeption Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Codeception Action
+      uses: joelwmale/codeception-action@1.0.0
