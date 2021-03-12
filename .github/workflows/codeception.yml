@@ -28,5 +28,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
       
+    - name: Start php server
+      run: php artisan serve --port=80
+      
     - name: CodeCeption tests
       uses: joelwmale/codeception-action@master
